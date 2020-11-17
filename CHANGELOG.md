@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/digitalmaas/uuid-base62/compare/v1.0.0...v1.0.1) (2020-11-17)
+
+
+### Bug Fixes
+
+* project name ([ac71336](https://github.com/digitalmaas/uuid-base62/commit/ac713368beafbe86bc6413d6ad32dbfe88e8a486))
+
 # [1.0.0](https://github.com/digitalmaas/uuid-base62/compare/v0.1.0...v1.0.0) (2020-11-17)
 
 
