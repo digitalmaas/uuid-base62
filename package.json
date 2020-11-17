@@ -1,5 +1,5 @@
 {
-  "name": "uuid-base62",
+  "name": "@digitalmaas/uuid-base62",
   "version": "0.1.0",
   "description": "Base62 UUID encoder and decoder",
   "main": "index.js",
