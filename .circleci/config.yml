@@ -22,6 +22,8 @@ workflows:
     jobs:
       - run_tests
       - release:
+          context:
+            - npm-and-github
           requires:
             - run_tests
           filters:
