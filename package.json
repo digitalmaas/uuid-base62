@@ -1,37 +1,58 @@
 {
   "name": "uuid-base62",
   "version": "0.1.0",
-  "description": "Base62 non-sequential url-safe UUID generator (RFC4122)",
-  "main": "uuid-base62.js",
+  "description": "Base62 UUID encoder and decoder",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "lint": "xo",
+    "test": "mocha lib/*.test.js",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "base-x": "^3.0.8"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@semantic-release/git": "9.0.0",
+    "husky": "4.3.0",
+    "lint-staged": "10.5.1",
+    "mocha": "8.2.1",
+    "semantic-release": "17.2.3",
+    "xo": "0.34.2"
+  },
+  "keywords": [
+    "digitalmaas",
+    "guid",
+    "uuid",
+    "uid",
+    "id",
+    "base62",
+    "short-id",
+    "identifier",
+    "url-friendly",
+    "encode",
+    "decode"
+  ],
+  "engines": {
+    "node": ">=8.2.1",
+    "npm": ">=5"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmarcelino/uuid-base62.git"
+    "url": "git+https://github.com/digitalmaas/uuid-base62.git"
   },
-  "keywords": [
-    "uuid",
-    "uid",
-    "base62",
-    "unique",
-    "id",
-    "identifier",
-    "url-friendly",
-    "generator",
-    "base64"
-  ],
-  "author": "Dario Marcelino <dario@appscot.com>",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dmarcelino/uuid-base62/issues"
+    "url": "https://github.com/digitalmaas/uuid-base62/issues"
   },
-  "homepage": "https://github.com/dmarcelino/uuid-base62#readme",
-  "dependencies": {
-    "base-x": "^1.0.0",
-    "node-uuid": "^1.4.3"
+  "publishConfig": {
+    "access": "public"
   },
-  "devDependencies": {
-    "mocha": "*"
-  }
+  "contributors": [
+    "Dario Marcelino <dario@appscot.com>",
+    "Ricardo Nolde <nolde@users.noreply.github.com>"
+  ],
+  "author": "Ricardo Nolde <nolde@users.noreply.github.com>",
+  "homepage": "https://github.com/digitalmaas/uuid-base62#readme",
+  "license": "MIT"
 }
