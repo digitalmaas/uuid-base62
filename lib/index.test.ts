@@ -1,7 +1,7 @@
-/* global describe, it */
+import { describe, it } from 'node:test'
+import assert from 'node:assert';
 
-const assert = require('assert')
-const uuidBase62 = require('.')
+import * as uuidBase62 from './index.js'
 
 describe('uuid-base62', function () {
   //
