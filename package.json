@@ -3,7 +3,7 @@
   "version": "0.0.0-semantic",
   "description": "Base62 UUID encoder and decoder",
   "type": "module",
-  "main": "dist/index.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.js",
   "exports": {
     "./package.json": "./package.json",
