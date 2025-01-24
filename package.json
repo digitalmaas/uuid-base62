@@ -1,26 +1,56 @@
 {
   "name": "@digitalmaas/uuid-base62",
-  "version": "0.1.0",
+  "version": "0.0.0-semantic",
   "description": "Base62 UUID encoder and decoder",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "default": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
   "scripts": {
+    "build": "npm run build:clean && npm run build:lib",
+    "build:clean": "rimraf ./dist/",
+    "build:lib": "tsup-node --dts",
     "lint": "xo",
-    "test": "mocha lib/*.test.js",
-    "release": "semantic-release"
+    "prepare": "husky",
+    "release": "semantic-release",
+    "test:ts": "tsc --noEmit",
+    "test:unit": "node --import tsx --test lib/index.test.ts",
+    "test": "npm run test:ts && npm run test:unit"
   },
   "dependencies": {
-    "base-x": "^3.0.8"
+    "base-x": "^5.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "9.0.0",
-    "husky": "4.3.0",
-    "lint-staged": "10.5.1",
-    "mocha": "8.2.1",
-    "semantic-release": "17.2.3",
-    "xo": "0.34.2"
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-conventional": "19.6.0",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@types/node": "22.10.10",
+    "husky": "9.1.7",
+    "lint-staged": "15.4.2",
+    "rimraf": "6.0.1",
+    "semantic-release": "23.1.1",
+    "tiny-glob": "0.2.9",
+    "tsup": "8.3.5",
+    "tsx": "4.19.2",
+    "typescript": "4.9.5",
+    "xo": "0.60.0"
   },
   "keywords": [
     "digitalmaas",
@@ -36,8 +66,8 @@
     "decode"
   ],
   "engines": {
-    "node": ">=8.2.1",
-    "npm": ">=5"
+    "node": ">=18",
+    "npm": ">=9"
   },
   "repository": {
     "type": "git",
