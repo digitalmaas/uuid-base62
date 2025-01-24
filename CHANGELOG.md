@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/digitalmaas/uuid-base62/compare/v2.0.0...v2.0.1) (2025-01-24)
+
+
+### Bug Fixes
+
+* adjust issue with rollup optional dependency for build ([5f31715](https://github.com/digitalmaas/uuid-base62/commit/5f31715183218161a3aa4764eadb7e8b4d9aaa9d))
+* fix issue with npm package creation ([b3c93d0](https://github.com/digitalmaas/uuid-base62/commit/b3c93d08f67a611fd14b61f76dad1737de725b1c))
+
 # [2.0.0](https://github.com/digitalmaas/uuid-base62/compare/v1.0.1...v2.0.0) (2025-01-24)
 
 
